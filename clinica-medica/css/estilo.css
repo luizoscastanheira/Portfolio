@@ -33,6 +33,8 @@ body{
 .topo-links a{
     text-decoration: none;
     color: white;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .topo-links a:hover{
