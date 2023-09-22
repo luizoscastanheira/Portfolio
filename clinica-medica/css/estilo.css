@@ -1,0 +1,41 @@
+/* Reset dos elementos*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Fim do Reset */
+/* Estilos gerais */
+body{
+    font-family: 'Source Sans Pro',sans-serif;
+}
+/* Fim dos Estilos Gerais*/
+
+/* Estilizando o Topo (cabeçalho) da página */
+.topo {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+
+.containerGeral {
+    width: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.topo-links{
+    
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.topo-links a{
+    text-decoration: none;
+    color: white;
+}
+
+.topo-links a:hover{
+    color: blueviolet;
+}
+
