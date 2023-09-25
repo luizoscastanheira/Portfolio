@@ -5,19 +5,30 @@
 }
 /* Fim do Reset */
 /* Estilos gerais */
+* {
+    box-sizing: border-box;
+}
+
 body{
     font-family: 'Source Sans Pro',sans-serif;
+    
+}
+
+.containerGeral { /* pode ser usado para outras areas do site */
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 15px;
 }
 /* Fim dos Estilos Gerais*/
 
 /* Estilizando o Topo (cabeçalho) da página */
 .topo {
-    background-color: aqua;
+    background-color: #00cad1;
     display: flex;
     justify-content: center;
 }
 
-.containerGeral {
+.containerTopo {
     width: 1024px;
     display: flex;
     align-items: center;
@@ -26,7 +37,7 @@ body{
 
 .topo-links{
     
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -40,5 +51,116 @@ body{
 .topo-links a:hover{
     color: blueviolet;
 }
+/* Fim dos estilos de cabeçalho */
 
 /* Estilizando o corpo da página */
+
+.box-secao-logo{
+    background-image: url("../assets/recepcao.png");
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;   
+}
+
+.container-logo{
+    width: 1024px;
+    display: flex;
+    align-items: center;
+}
+
+.container-logo h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+/* Estilizando outras seções do home */
+/* Seção Sobre */
+.box-secao-sobre{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.box-sobre-titulo{
+    text-align: center;
+}
+.box-sobre-lista{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Seção especialidades */
+
+#especialidades{
+    font-size: 20px;
+}
+
+.box-secao-especialidades-titulo{
+    text-align: center;
+}
+.especialidades-cards{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.card{
+    border-radius: 3px;
+    box-shadow: 0px 1px 10px black;
+    margin: 20px;
+   
+    width: calc(100% / 3 - 40px);
+}
+.card img{
+    width: 100%;
+}
+
+.card figcaption{
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.box-horarios{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.box-horarios-links{
+    background-color: #00cad1;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+.box-horarios-links:hover{
+    color: blueviolet;
+}
+
+/* Estilizando a seção contatos*/
+.box-contato{
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.box-contato span{
+    font-weight: bold;
+    line-height: 40px;
+}
+
+
+/* Estilizando o rodapé */
+
+.rodape{
+    text-align: center;
+    background-color: #0d6e71;
+    color: #fff;
+    padding: 20px;
+    line-height: 40px;
+    font-size: 20px;
+}
+/* Fi do CSS do Rodapé*/
