@@ -163,4 +163,35 @@ body{
     line-height: 40px;
     font-size: 20px;
 }
-/* Fi do CSS do Rodapé*/
+/* Fim do CSS do Rodapé*/
+/* Fim do CSS principal */
+
+  /************************************/
+ /* Criando a Resposividade do Site */
+/**********************************/
+
+/* Telas de até no máximo 425 pixels*/
+@media (max-width: 425px){
+    .topo-links{
+        font-size: 12px;
+    }
+
+    .containerTopo {
+        width: 1024px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+}
+
+/* Telas de até no máximo 768 pixels */
+@media (max-width: 768px){
+
+}
+
+/* Teals de até no máximo 1024 pixels */
+@media (max-width: 1024px){
+
+}
