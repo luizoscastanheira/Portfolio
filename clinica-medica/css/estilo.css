@@ -170,28 +170,100 @@ body{
  /* Criando a Resposividade do Site */
 /**********************************/
 
-/* Telas de até no máximo 425 pixels*/
-@media (max-width: 425px){
-    .topo-links{
-        font-size: 12px;
-    }
-
-    .containerTopo {
-        width: 1024px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
+/* Telas de até no máximo 1024 pixels */
+@media (max-width: 1024px){
 
 }
 
 /* Telas de até no máximo 768 pixels */
 @media (max-width: 768px){
+    .containerGeral{
+        max-width: 95%;
+    }
+    /*estilizando a seção Sobre*/
+    #imgMedicoLista{
+        display:none;
+    }
 
+    .box-secao-logo{  
+        height: 300px;
+    }
 }
 
-/* Teals de até no máximo 1024 pixels */
-@media (max-width: 1024px){
 
+
+
+/* Telas de até no máximo 425 pixels*/
+@media (max-width: 425px){
+    .containerGeral{
+        max-width: 95%;
+    }
+
+    /* estilizando o topo*/
+    .topo-links{
+        font-size: 14px;
+        border-top: 1px solid gray;
+        width: 90%;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .containerTopo {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .box-secao-logo{  
+        height: 200px;
+    }
+    .container-logo h1{
+        font-size: 20px;
+    }
+    
+    /*estilizando a seção Sobre*/
+    #imgMedicoLista{
+        display:none;
+    }
+    .box-secao-sobre{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        width: 90%;
+    }
+
+    /* Estilizando a seção especialidades*/
+    #especialidades p{
+        font-size: 12px;
+    }
+    #especialidades h3{
+        font-size: 18px;
+    }
+
+    .especialidades-cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .box-horarios-links{
+        font-size: 14px;
+    }
+    .card{
+        margin: 10px;
+        width: 90%;
+    }
+    .card figcaption{
+        font-size: 18px;
+    }
+    
+    /* Estilizando contatos */
+    .box-contato{
+        font-size: 14px;
+    }
+    /* estilizando rodapé */
+    #contatos{
+        font-size: 18px;
+        padding:10px;
+    }
+    
 }
