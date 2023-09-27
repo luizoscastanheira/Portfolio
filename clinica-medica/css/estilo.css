@@ -172,6 +172,9 @@ body{
 
 /* Telas de até no máximo 1024 pixels */
 @media (max-width: 1024px){
+    .containerGeral{
+        max-width: 95%;
+    }
 
 }
 
@@ -188,9 +191,26 @@ body{
     .box-secao-logo{  
         height: 300px;
     }
+
+    .especialidades-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .box-horarios-links{
+        font-size: 14px;
+    }
+    .card{
+        margin: 10px;
+        width: calc(100% / 2 - 40px);
+    }
+    .card figcaption{
+        font-size: 18px;
+    }
+
+
 }
-
-
+/* Fim das Telas de 768 pixels*/
 
 
 /* Telas de até no máximo 425 pixels*/
