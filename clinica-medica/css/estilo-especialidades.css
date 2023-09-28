@@ -1,0 +1,19 @@
+/* Estilizando a página especialidades - Especificos*/
+/* Estilizando o topo da página e seus links e título */
+.secaoTopoEspecialidades{
+    text-align: center;
+}
+#linksEspecialidades a{
+    text-decoration: none;
+    border-bottom: 2px solid #00cad1;
+    margin: auto 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color:black;
+}
+#linksEspecialidades a:hover{
+    color: #00cad1;
+}
+.secaoTopoEspecialidades h1{
+    font-size: 32px;
+}
