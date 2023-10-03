@@ -1,0 +1,103 @@
+/* 
+    Created on : 4 de abr. de 2023, 10:53:51
+    Author     : luizo
+*/
+
+/* Abaixo um estilo padrão para "resetar" estilos do navegador */
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* Estilizando a largura máxima*/
+.larguraMaxima {
+    width: 100%;
+    max-width: 1024px;
+}
+
+/* Estilizando a seção topo */
+#topoHome {
+    display: flex;
+    width: 100%;
+    max-width: 1024px;
+    height: 150px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+}
+#topoHome img {
+    width: 80px;
+    margin-right: 10px;
+}
+#topoLogo {
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+}
+#topoListaLinks {
+    margin-left: 20px;
+}
+#topoLogo h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000;
+}
+#topoLogo p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2f86d6;
+}
+.linkTopo {
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #233032;
+}
+
+
+/* Eslizando a seção contato/rodapé */
+#rodapeLogo img {
+    width: 80px;
+    margin-right: 10px;
+}
+#rodapeLogo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    margin: 20px auto;
+ }
+ #rodapeLogo h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000;
+}
+#rodapeLogo p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2f86d6;
+}
+#contatos {
+     text-align: center;
+     margin: 20px auto;
+     padding: 20px;
+     font-size: 16px;
+     line-height: 40px;
+     color: #000000;
+}
+#copyRight {
+     text-align: center;
+     margin: 20px auto;
+     width: 50%;
+     border-top: 1px solid grey;
+     border-bottom: 1px solid grey;
+ }
+ #copyRight span {
+     color: blue;
+     font-size:16px;
+     font-weight: bold;
+}

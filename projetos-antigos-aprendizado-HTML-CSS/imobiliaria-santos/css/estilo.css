@@ -1,0 +1,144 @@
+/* Estilos genéricos com seltores de tag */
+
+body {
+    margin: 0;
+    font-family: 'Tahoma';
+}
+
+div {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+p {
+    margin: 10px auto;
+    width: 980px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 28px;   
+}
+
+span {
+    font-weight: bold;
+}
+
+/* Estilos especificos com seltores de class ou id  */
+
+#logoLinks {
+    background-color: #afddfb;
+}
+
+#logoLinks img {
+    width: 150px;
+}
+
+#logoLinks p{
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#logoLinks p a{
+    font-size: 18px;
+    color: #1d1d1d;
+    text-decoration: none;
+    border-bottom: 2px solid #1d1d1d;
+    margin: 0 10px;    
+}
+
+#banner {
+    margin-top: 50px;
+    padding-top: 0;
+}
+
+#sobre h1 {
+    color: #1d1d1d;
+    margin-bottom: 5px;
+}
+
+#sobre h2 {
+    color: #1c81c0;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+#sobre img, #corretores img {
+    width: 450px;
+}
+
+.texto-azul{
+    font-weight: bold;
+    color: #1c81c0;
+}
+
+.texto-amarelo{
+    font-weight: bold;
+    color: #fff81b;
+}
+
+#servicos {
+    background-color: #1d80c1;
+}
+
+#servicos h2, #contato h2 {
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 42px;
+}
+
+#servicos p {
+    color:#ffffff;
+    font-size: 22px;
+    line-height: 42px;
+    width: 700px;
+    text-align: center;
+}
+
+#servicos ul {
+    width: 135px;
+    margin: 40px auto;
+    text-align: left;
+    color: #ffffff;
+    line-height: 42px;
+    font-size: 22px;
+}
+
+#corretores h2 {
+    color: #1c81c0;
+    margin-top: 0;
+    font-size: 28px;
+    line-height: 42px;
+}
+
+#contato {
+    background-color: #1d80c1;
+}
+
+#contato p {
+    color:#ffffff;
+    background-color: #1d1d1d;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#contato ul {
+    width: 210px;
+    margin: 40px auto;
+    list-style-type: none;
+}
+
+#contato ul li {
+    font-size: 18px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#contato a {
+    background-color:#ffffff;
+    color:#1d80c1;
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
+}
+
