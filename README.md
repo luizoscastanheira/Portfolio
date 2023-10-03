@@ -3,4 +3,4 @@
 
  Está ainda em evolução à medida que vou criando meus projetos, ainda voltado para HTML5 + CSS3.
 
- A pasta projetos-antigos-aprensizado-HTML-CSS é de projetos mais antigos do inicio mesmo do meu aprendizado em HTML e CSS.
+ A pasta projetos-antigos-aprendizado-HTML-CSS é de projetos mais antigos do início mesmo do meu aprendizado em HTML e CSS.
