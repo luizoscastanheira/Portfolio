@@ -13,7 +13,6 @@ body{
 /* Estilos e Classes que se reaproveita */
 .larguraMax{
     max-width: 1024px;
-    
     border: 1px solid grey; /* retirar ao concluir */
 }
 /* Fim dos estilo reaproveitáveis */
@@ -143,7 +142,7 @@ button:hover{
 #secaoOfertas{
     width: 100%;
     height: auto;
-    margin: 32px auto;
+    margin: 32px auto auto 0px;
     
 }
 #secaoOfertas h2{
@@ -174,33 +173,26 @@ button:hover{
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
+    gap:15px;
 }
-
-#blocoImagens figure{
-    position: relative;
+.quatroImagens{
+    
     width: calc(50% - 10px);
     height: calc(50% - 10px);
-    margin: 0 6px;
-}
 
-#imgDestaque img, #blocoImagens img{
-    object-fit: cover;
+}
+.imgTamanho{
+    position: relative;
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
+    margin: 6px;
 }
-
 .legenda{
     position: absolute;
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    background: rgb(0 0 0 / 50%);
-    font-size: 17px;
+    background-color: rgba(0,0,0,50%);
     color: #fff;
-
-    padding: 5px 10px;
-    box-sizing: border-box;
+    text-align: center;
+    font-size: 17px;
+    width: 100%;
 }
