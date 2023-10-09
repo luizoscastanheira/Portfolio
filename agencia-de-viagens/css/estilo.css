@@ -13,8 +13,6 @@ body{
 /* Estilos e Classes que se reaproveita */
 .larguraMax{
     max-width: 1024px;
-    
-    border: 1px solid grey; /* retirar ao concluir */
 }
 /* Fim dos estilo reaproveitáveis */
 
@@ -140,17 +138,17 @@ button:hover{
     cursor: pointer;
 }
 /* Eslizando a Seção Ofertas */
-#secaoOfertas{
+.blocoPadrao{
     width: 100%;
     height: auto;
     margin: 32px auto;
     
 }
-#secaoOfertas h2{
+.bolcoPadrao h2{
     font-size: 20px;
     margin-bottom: 10px;
 }
-#secaoOfertas h3{
+.blocoPadrao h3{
     font-weight: normal;
     font-size: 16px;
     margin-bottom: 10px;
@@ -177,30 +175,177 @@ button:hover{
     flex-direction: column;
     justify-content: space-between;
 }
-
 #blocoImagens figure{
     position: relative;
     width: calc(50% - 10px);
     height: calc(50% - 10px);
     margin: 0 6px;
 }
-
 #imgDestaque img, #blocoImagens img{
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
-
 .legenda{
     position: absolute;
     left: 0;
     bottom: 0;
-
     width: 100%;
     background: rgb(0 0 0 / 50%);
     font-size: 17px;
     color: #fff;
-
     padding: 5px 10px;
     box-sizing: border-box;
+}
+
+/* Estilizando a seção anuncios */
+#containerDuasImagens{
+    width: 100%;
+    height: auto;
+    display:flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.imgAnuncios{
+    width: calc(50% - 10px);
+    width: 100%;
+}
+.imgAnuncios img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.legendaAnuncios{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.legendaAnuncios h4{
+    font-size: 16px;
+}
+.legendaAnuncios p{
+    color: grey;
+    font-size: 15px;
+    margin-top: 15px;
+}
+/* Estilziando o Rodapé*/
+#secaoRodape{
+    position: absolute;
+    width: 100%;
+    background-color: #5d15d1;
+    margin-top: 100px;
+   
+}
+footer div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto; 
+}
+#contatos, #redesSociais{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#contatos h2, #redesSociais h2{
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+#contatos div, #redesSociais div{
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#contatos div img, #redesSociais div img{
+    width: 18px;
+}
+#contatos div span, #redesSociais div span{
+    color: #fff;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+/*************************************/
+/* Criando a responsividade do site */
+/***********************************/
+/* Telas de até 1100px */
+@media (max-width: 1100px){
+    .larguraMax{
+        width: 90%;
+    }
+}
+/* Telas de até 768px */
+@media (max-width: 768px){
+    button{
+        width: 100%;
+    }
+
+    /* Seção Ofertas */
+    .imagensOfertas{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #imgDestaque{
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    #blocoImagens{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #blocoImagens figure{
+        position: relative;
+        width: 100%;
+        height: 225px;
+        margin-top:15px;
+    }
+    /* Seção Anuncios */
+    #containerDuasImagens{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+    }
+
+    /* Secao Rodapé*/
+    #secaoRodape{
+        position: relative;
+        margin-top: auto;  
+    }
+
+    #rodapeColuna{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #redesSociais, contatos{
+        width: 250px;
+    }
+}
+/* Telas de Até 540px */
+@media (max-width:540px){
+    .quadrosOpcoes{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .opcoes{
+        width: 100%;
+    }
+    #secaoRodape{
+        position: relative;
+        margin-top: auto;  
+    }
 }
