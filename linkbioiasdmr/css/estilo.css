@@ -1,0 +1,12 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+/* Estilos gerais */
+/* body{
+    font-family: 'Montserrat', sans-serif;
+    
+} */
