@@ -11,12 +11,27 @@
     
 } */
 
-/* estilzando a Sção Banner*/
-
+/* estilzando a Seção Banner*/
+/* Inserindo um vido como fundo - feito com a tag html video */
 #secaoBanner video {
     position: absolute;
     z-index: -1;
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+#imgHome {
+    width: 250px;
+    border-radius: 50%;
+}
+
+  #linksBanner{
+    display:flex;
+    flex-direction: column;
+  }
+
+  /* Estilizando a Seção Estatisticas */
+  #secaoEstatisticas{
+    background-image: url("../assets/imagemdefundo.png");
   }
