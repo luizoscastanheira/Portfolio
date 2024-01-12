@@ -11,7 +11,7 @@ console.clear();
 // Definindo a Tela de Abertura
 console.log("*********************************************************");
 console.log("*                                                       *");
-console.log("*                Salário  X  Inflação                   *");
+console.log("*            Salário  X  Inflação - Versão 1            *");
 console.log("*                                                       *");
 console.log("*********************************************************");
 
@@ -43,7 +43,6 @@ let inflacaoIpca = [
     {ano: 2019, ipca: 4.31},
     {ano: 2020, ipca: 4.52}
 ]
-// Fim da coleção
 
 // Definindo variáveis
 let escolha = 0;
@@ -105,23 +104,34 @@ switch(Number(opcao))
             let indiceIpca = inflacaoIpca[contador].ipca;
             let labelIpca = "Índice de Inflação";
             let ipcaFormatado = indiceIpca.toFixed(2).replace(".",",");
+            
+            //Calculando o crescimento salarial
+            let labelCreSal = "Crescimento Salarial: "
+            let crescimento = 0;
+            if (contador > 0){
+                let salarioAnterior = salarioMinimo[contador-1].salario;
+                //console.log(salarioAnterior); - usado para teste, será excluida a linha
+                let diferenca = salario - salarioAnterior;
+                //console.log(diferenca); - usado para teste, será excluida a linha
+                crescimento = (diferenca / salarioAnterior) * 100;
+                //console.log(crescimento); - usado para teste, será excluida a linha
+            }
+
             // listando no consele as informações
             console.log(labelAno.padEnd(30, ".") + ano);
             console.log(labelSalario.padEnd(30,".") + "R$ " + salarioFormatado);
+            console.log(labelCreSal.padEnd(30, ".") + crescimento.toFixed(2) + "%");
             console.log(labelIpca.padEnd(30, ".") + ipcaFormatado + "%");
             console.log();
             contador++; // incrementando o contador que auxilia o acesso ao ipca
         }
         break;
     default:
-        console.log("->>> Você escolheu uma opcão inválida - Tente Novamente <<<-");
+        console.log("->>> Você escolheu uma opcão inválida - Tente Novamente Mais Tarde <<<-");
         break;
 }
 
 // Executando a Escolha
 console.log("--------------------------------------------------------------");
-console.log("**                 Seu Relatório                            **");
+console.log("**               Fim do Programa - Até Logo!                **");
 console.log("--------------------------------------------------------------");
-
-
-
