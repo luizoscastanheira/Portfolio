@@ -59,7 +59,7 @@ console.log();
 // Implementando o input do Menu
 let opcao = dados.question("Digite o número da opção de sua escolha: ");
 console.log();
-console.log(`Você escolheu a opção ${opcao}`);
+console.log(`Você escolheu a opção ${opcao}.`);
 
 switch(Number(opcao))
 {
