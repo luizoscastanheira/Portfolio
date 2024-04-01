@@ -4,13 +4,10 @@
 
 // Importando módulos para o jogo - arquivo de dados e de funções
 import listaDeFrutas from "./dados/dados.js"; // Importando os dados
-import { loopGame, palavraAleatoria, ocultarPalavra, atualizarPalavraOculta } from "./funcoes/funcoes.js"; // Importando as funções
+import { palavraAleatoria, ocultarPalavra, atualizarPalavraOculta } from "./funcoes/funcoes.js"; // Importando as funções
 
 // Importando o readline-sync
 import entradaUser from 'readline-sync';
-
-// Criando algumas variáveis globais
-
 
 // Tela inicial do programa
 console.clear();
@@ -29,46 +26,68 @@ function iniciarApp(){
     let frutaEscolhida = palavraAleatoria(listaDeFrutas);
    
     console.log(`Advinhe o nome da Fruta com ${frutaEscolhida.length} letras: `);
-    console.log(frutaEscolhida);
     console.log();
     
-    // O
+    // Ocultando a palavra escolhida
     let palavraOculta = ocultarPalavra(frutaEscolhida);
-    console.log(palavraOculta);
     console.log();
-    
-    //Perguntando as letras
-    
-    console.log(frutaEscolhida.length);
 
-    for (let contador = 0; contador < frutaEscolhida.length -1; contador++){
+    /**
+     * Criando uma variável auxiliar para trabalhar na função que atualiza
+     * a palavra oculta.
+     */
+    let palavraEscondida = palavraOculta;
+    console.log(palavraEscondida);
+    
+    // Variável para contar o número de erros
+    let contaErro = 4;
+ 
+    // Laço principal para verificar as letras e contar erros
+    while (contaErro > 0){
+               
+        // Perguntando uma letra
         let letraDigitada = entradaUser.question('Digita uma letra: ');
-        let testePalavra = atualizarPalavraOculta(palavraOculta, letraDigitada, frutaEscolhida);
+        let testePalavra = atualizarPalavraOculta(palavraEscondida, letraDigitada, frutaEscolhida);
         console.log(testePalavra);
+        //palavraEscondida = testePalavra; // atualizando a variável fora do laço
+        
+        // Testando a palavra e atualizando conforme o caso
+        if (testePalavra != palavraEscondida){
+            palavraEscondida = testePalavra; // atualizando a variável fora do laço
+            if(palavraEscondida == frutaEscolhida){
+                console.log();
+                console.log('Sucesso! Você conseguiu acertar a palavra, PARABENS!!!');
+                console.log('A palavra descoberta foi *** ' + frutaEscolhida + ' *** !!!');
+                console.log();
+                break;
+            };
+        }else{
+            contaErro--;
+            if (contaErro == 0){
+                console.log('Infelizmente você perdeu todas a chances!');
+            }else{
+                console.log(`você errou ou repetiu letra, tem mais ${contaErro} tentativas.`);
+            };
+ 
+        };
+
     };
-    
-    
-    
+     
+    // Repetindo o jogo caso o usuário deseje.
+    let repetirGame = entradaUser.question('Deseja jogar novamente? Digite S ou N: ');
+    let escolha = repetirGame.toLocaleUpperCase();
+    if(escolha== 'S' ){
+        iniciarApp();
+    };
 
-
-
-    //bloco teste
-    //let letraDigitada = "e";
-    //let testePalavra = atualizarPalavraOculta(palavraOculta, letraDigitada, frutaEscolhida);
-    //console.log(testePalavra);
-    
 };
 
 iniciarApp();
 
-
-
-/*
-// Programa de inicio
-let escolha = entradaUser.question("Deseja Iniciar o programa?")
-if (escolha == "S"){
-    iniciarApp();
-}else{
-    console.log("OK, deixemos para outro dia.");
-};
-*/
+console.log();
+console.log('***********************************************************');
+console.log('**                     FIM DE JOGO! ***********************');
+console.log('***********************************************************');
+console.log();
+console.log();
+console.log ('Obrigado por jogar! Volte quando quiser.');
