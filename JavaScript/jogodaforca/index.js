@@ -84,9 +84,10 @@ function iniciarApp(){
 
 iniciarApp();
 
+console.clear();
 console.log();
 console.log('***********************************************************');
-console.log('**                     FIM DE JOGO! ***********************');
+console.log('**                     FIM DE JOGO!                      **');
 console.log('***********************************************************');
 console.log();
 console.log();
