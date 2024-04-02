@@ -43,10 +43,9 @@ function iniciarApp(){
     let contaErro = 4;
  
     // Laço principal para verificar as letras e contar erros
-    while (contaErro > 0){
-               
+    while (contaErro > 0){  
         // Perguntando uma letra
-        let letraDigitada = entradaUser.question('Digita uma letra: ');
+        let letraDigitada = entradaUser.question('Digite uma letra: ');
         let testePalavra = atualizarPalavraOculta(palavraEscondida, letraDigitada, frutaEscolhida);
         console.log(testePalavra);
         //palavraEscondida = testePalavra; // atualizando a variável fora do laço
@@ -64,9 +63,10 @@ function iniciarApp(){
         }else{
             contaErro--;
             if (contaErro == 0){
-                console.log('Infelizmente você perdeu todas a chances!');
+                console.log('Infelizmente você perdeu todas as chances!');
             }else{
-                console.log(`você errou ou repetiu letra, tem mais ${contaErro} tentativas.`);
+                console.log();
+                console.log(`Você errou ou repetiu letra, tem mais ${contaErro} tentativas.`);
             };
  
         };
@@ -77,6 +77,7 @@ function iniciarApp(){
     let repetirGame = entradaUser.question('Deseja jogar novamente? Digite S ou N: ');
     let escolha = repetirGame.toLocaleUpperCase();
     if(escolha== 'S' ){
+        console.clear();
         iniciarApp();
     };
 
@@ -91,4 +92,6 @@ console.log('**                     FIM DE JOGO!                      **');
 console.log('***********************************************************');
 console.log();
 console.log();
-console.log ('Obrigado por jogar! Volte quando quiser.');
+console.log('***********************************************************');
+console.log ('******* Obrigado por jogar! Volte quando quiser. *********');
+console.log('***********************************************************');
