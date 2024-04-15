@@ -1,0 +1,75 @@
+/* Estilizando a página especialidades - Especificos*/
+/* Estilizando o topo da página e seus links e título */
+.secaoTopoEspecialidades{
+    text-align: center;
+}
+#linksEspecialidades a{
+    text-decoration: none;
+    border-bottom: 2px solid #00cad1;
+    margin: auto 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color:black;
+}
+#linksEspecialidades a:hover{
+    color: #00cad1;
+}
+.secaoTopoEspecialidades h1{
+    font-size: 32px;
+}
+.cardEspecialidades{
+    display: flex;
+    justify-content: center;
+}
+.cardEspecialidades img{
+    width: 30%;
+    height: 100%
+    /* width: 300px; podria usar valor fixo*/
+}
+.tituloDescEspecialidades{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Estilizando a tabela*/
+/* Linha de Titulos*/
+table{
+    /* para retirar o espaço existente entre as celulas pode usar duas propriedades diferentes */
+    /* border-collapse:collapse; */
+    border-spacing: 0;
+    width: 70%;
+    
+}
+th{ 
+    background-color: #00cad1;
+    color: white;
+    line-height: 30px;
+    
+}
+/* linhas par */
+tr:nth-child(even) {
+    background-color: #e9e2e2;
+    
+  }
+/* Linhas Ímpar */  
+tr:nth-child(odd) {
+    background-color: #897e7e;
+    
+}
+.tabela-especialistas th, .tabela-especialistas td  {
+    padding: 10px;
+  }
+  /* Configurando o responsivo da página especialidades */
+  @media (max-width: 769px){
+    .cardEspecialidades img{
+        display:none;
+        
+    }
+  }
+  @media (max-width: 426px){
+    .cardEspecialidades img{
+        display:none;
+    }
+  }
+  

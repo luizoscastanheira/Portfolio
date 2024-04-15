@@ -1,0 +1,351 @@
+/* Resetando Estilos de toda a página */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilizando o corpo geral da página */
+body{
+    background-color: #80808029;
+    font-family: Raleway;
+}
+
+/* Estilos e Classes que se reaproveita */
+.larguraMax{
+    max-width: 1024px;
+}
+/* Fim dos estilo reaproveitáveis */
+
+/* Estilizando o topo */
+.img32px{
+    width: 32px;
+    height:32px;
+}
+#secaoCabecalho{
+    width: 100%;
+    height: 55px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerAgrupCentral{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#textoLogo{
+    font-size: 24px;
+    color: #5d15d1;
+    margin-left: 10px;
+}
+/* Fim dos estilo do topo*/
+
+/* Estilizando a área do Formulário*/
+#secaoFormulario{
+    width: 100%;
+    height: auto;
+    background: url("../imagens/bahia.jpg") no-repeat;
+    background-size: cover;
+}
+#formulario{
+    margin:0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    height: auto;
+}
+#formularioTopo{
+    width: 100%;
+    height: 35px;
+    background-color: #5d15d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#formularioTopo img{
+    width: 20px;
+    rotate: -45deg;
+}
+#formularioTopo h1{
+    font-size: 14px;
+    color: #fff;
+    margin-left: 5px;
+}
+#formularioCorpo{
+    width: 100%;
+    background-color: #fff;
+    padding: 30px 25px 20px 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+#formularioCorpo h2{
+    font-size: 22px;
+    margin-bottom: 24px;
+}
+label{
+    font-size: 16px;
+}
+input, select{
+    width: 100%;
+    height: 32px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+select{
+    padding-left: 3px;
+    padding-right: 3px;
+    box-sizing: border-box;
+}
+.quadrosOpcoes{
+    display: flex;
+    width: 100%;
+}
+.opcoes{
+    width: 50%;
+}
+.prefQuarto .prefHospedagem{
+    display: flex;
+    justify-content: flex-start;
+}
+.marcaItem{
+    display: flex;
+    width: 120px;
+    align-items: center;
+}
+.marcaItem input{
+    width: 15px;
+   
+}
+.marcaItem label{
+    margin-left: 8px;
+}
+button{
+    width: 160px;
+    height: 32px;
+    background-color: #5d15d1;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 12px;
+}
+button:hover{
+    cursor: pointer;
+}
+/* Eslizando a Seção Ofertas */
+.blocoPadrao{
+    width: 100%;
+    height: auto;
+    margin: 32px auto;
+    
+}
+.bolcoPadrao h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.blocoPadrao h3{
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.negrito{
+    font-weight: bold;
+}
+.imagensOfertas{
+    width: 100%;
+    height: 375px;
+    display: flex;
+    justify-content: space-between;
+}
+#imgDestaque{
+    position: relative;
+    width: calc(50% - 10px);
+    height: 100%;
+}
+#blocoImagens{
+    width: calc(50% - 10px);
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#blocoImagens figure{
+    position: relative;
+    width: calc(50% - 10px);
+    height: calc(50% - 10px);
+    margin: 0 6px;
+}
+#imgDestaque img, #blocoImagens img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.legenda{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgb(0 0 0 / 50%);
+    font-size: 17px;
+    color: #fff;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+/* Estilizando a seção anuncios */
+#containerDuasImagens{
+    width: 100%;
+    height: auto;
+    display:flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.imgAnuncios{
+    width: calc(50% - 10px);
+    width: 100%;
+}
+.imgAnuncios img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.legendaAnuncios{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.legendaAnuncios h4{
+    font-size: 16px;
+}
+.legendaAnuncios p{
+    color: grey;
+    font-size: 15px;
+    margin-top: 15px;
+}
+/* Estilziando o Rodapé*/
+#secaoRodape{
+    position: absolute;
+    width: 100%;
+    background-color: #5d15d1;
+    margin-top: 100px;
+   
+}
+footer div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto; 
+}
+#contatos, #redesSociais{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#contatos h2, #redesSociais h2{
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+#contatos div, #redesSociais div{
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#contatos div img, #redesSociais div img{
+    width: 18px;
+}
+#contatos div span, #redesSociais div span{
+    color: #fff;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+/*************************************/
+/* Criando a responsividade do site */
+/***********************************/
+/* Telas de até 1100px */
+@media (max-width: 1100px){
+    .larguraMax{
+        width: 90%;
+    }
+}
+/* Telas de até 768px */
+@media (max-width: 768px){
+    button{
+        width: 100%;
+    }
+
+    /* Seção Ofertas */
+    .imagensOfertas{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #imgDestaque{
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    #blocoImagens{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #blocoImagens figure{
+        position: relative;
+        width: 100%;
+        height: 225px;
+        margin-top:15px;
+    }
+    /* Seção Anuncios */
+    #containerDuasImagens{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+    }
+
+    /* Secao Rodapé*/
+    #secaoRodape{
+        position: relative;
+        margin-top: auto;  
+    }
+
+    #rodapeColuna{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #redesSociais, contatos{
+        width: 250px;
+    }
+}
+/* Telas de Até 540px */
+@media (max-width:540px){
+    .quadrosOpcoes{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .opcoes{
+        width: 100%;
+    }
+    #secaoRodape{
+        position: relative;
+        margin-top: auto;  
+    }
+}

@@ -1,8 +1,12 @@
+// Importando uma subcamada para formatar dados
+import formataIMC from './formatacaoDadosIMC.js';
+
 function calculaIMC(peso, altura)
 {
 
     let imc = peso / (altura * altura);
-    return imc;
+    let imcFormatado = formataIMC(imc);
+    return imcFormatado;
 }
 
 function retornaStatusIMC(imc)
