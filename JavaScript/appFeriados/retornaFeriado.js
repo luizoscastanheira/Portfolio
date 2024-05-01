@@ -1,6 +1,6 @@
 import feriadosNacionais from './dataFeriados.js';
 import filtraFeriados from './filtros.js';
-import {formataDiaSemana, formataDataFeriado} from './formataDataFeriado.js';
+import {formataDiaSemana, formataDataFeriado} from './formataDataFeriados.js';
 
 function retornaProximosFeriados(numeroFeriados)
 {
