@@ -1,158 +1,45 @@
 <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Luiz Otávio - Portfólio</title>
+</head>
+<body>
+    <button class="botao-menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 
-<html>
-    <head>
-        <title>Luiz Otávio - Portfólio</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/estilo.css">
-        <script src="https://unpkg.com/vue@next"></script>
-    </head>
-    <body>
-        <header>ATENÇÃO - Em Construção</header>
-        <!-- Seção da LinkBios -->
-        <section id="banner">
-            <div class="quadro">
-            <div id="areaFigura">
-                <figure>
-                    <img id="eu" src="img/eu.jpg">
-                <figcaption id="imgCaption">Luiz Otávio - Estudante em Dev Front-End & Análise de Sistemas</figcaption>
-            </figure>
-            </div>
-                <div id="areaLinks">
-                    <a class="itemLink" target="_blank" href="https://www.linkedin.com/in/luiz-ot%C3%A1vio-da-silva-castanheira-19683696/">
-                        <img src="img/linkedin-trans.png">
-                        <p>Conheça meu LinkedIn</p>
-                    </a>
-                    <a class="itemLink" target="_blank" href="https://github.com/luizoscastanheira">
-                        <img src="img/github.png">
-                        <p>Conheça meu GitHub</p>
-                    </a>
-                    <a class="itemLink" target="_blank" href="https://www.youtube.com/@LuizOtavioADS">
-                        <img src="img/youtube.png">
-                        <p>Visite meu Youtube</p>
-                    </a>
-                    <a class="itemLink" target="_blank" href="#contato">
-                        <img src="img/email.png">
-                        <p>Contate-me Aqui!</p>
-                    </a>
-                    <!-- <a class="itemLink" target="_blank" href="https://www.facebook.com/luizoscastanheiraADS">Facebook</a> -->
-                    <!-- <a class="itemLink" target="_blank" href="https://www.instagram.com/luizoscastanheira/">Instagran</a> -->
-               </div>
-            </div>    
-        </section>
-        
-        <!-- Seção das Informações -->
-        <section id="info">
+    <nav class="menu-lateral">
+        <ul>
+            <li>
+                <a href="#"><i class="fa-solid fa-house"></i> Home </a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-circle-info"></i>Sobre</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-gears"></i>Projetos</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-envelope-open-text"></i>Contato</a>
+            </li>
+        </ul>
+    </nav>
 
-            <div class="quadro quadroArtigos">
-            <article class="artigos">
-                <h2 class="titulosH">Um pouco sobre mim</h2>
-                <p>Comecei ainda com 15 anos ao adquirir meu primeiro computador, um HotBit HB-8000 da Sharp(<a target="_blank" href="https://pt.wikipedia.org/wiki/HotBit_HB-8000">Saiba Mais!</a>).</p><br>
-                <p>Aos 20 anos comecei a dar aulas de MS-DOS e Windows 3.11 e daí por diante, não parei mais, sempre aprendendo algo novo, novas tecnologias.</p><br>
-                <p>Sou profissional da área de tecnologia desde 1996, atuei a maior parte do tempo como instrutor de MS-DOS (esse, já falecido), Windows/Office  e administração de redes Linux em diversas escolas de informática em Três Rios, minha cidade natal, Paraíba do Sul e Petrópolis, onde atuei como monitor e intrutor do Senac Rio.</p>
-            </article>
-            <article class="artigos">
-                <h2 class="titulosH">Minha formação</h2>
-                <h3>Universidade de Vassouras</h3>
-                <p>Iniciada em Outubro de 2022, estou cursando a Graduação em Análise e Desenvolvimento de Sistemas.</p><br>
-                <h3>DevMedia</h3>
-                <p>Formação em Desenvolvedor Front-End em andamento, sendo, HTML5, CSS3 e Algorítimo concluídas, JavaScript em andamento e React, API e SQL ainda a caminho.</p><br>
-                <h3>Fundação Bradesco - Escola Vitual</h3>
-                <p>Formação em Desenvolvimento de Sistemas de T.I. onde abordamos:</p>
-               
-                    <ul class="lista" type="square">
-                        <li class="itemLista">Projetos de Sistemas de TI</li>
-                        <li class="itemLista">Fundamentos de Lógica de Programação</li>
-                        <li class="itemLista">Linguagem UML</li>
-                    </ul>
-                
-            </article>
-            </div>
-            <div>
-            <div><h1 class="titulosH">Clique na imagem e conheça minha certificação.</h1></div>
-            <div id="quadroHabilidades">
-              <a class="habLink" target="_blank" href="https://www.devmedia.com.br/certificado/tecnologia/programacao/luiz-otavio-da-silva-castanheira"><img class="imgHabilidades" src="./img/prog.png" alt="Simbolo Programação." title="Clique em mim!"></a>
-              <a class="habLink" target="_blank" href="https://www.devmedia.com.br/certificado/tecnologia/html/luiz-otavio-da-silva-castanheira"><img class="imgHabilidades" src="./img/html5.png" alt="Simbolo HTML5." title="Clique em mim!"></a>
-              <a class="habLink" target="_blank" href="https://www.devmedia.com.br/certificado/tecnologia/css/luiz-otavio-da-silva-castanheira"><img class="imgHabilidades" src="./img/css.png" alt="Simbolo CSS3." title="Clique em mim!"></a>
-              <a class="habLink" target="_blank" href="https://www.devmedia.com.br/certificado/tecnologia/algoritmo/luiz-otavio-da-silva-castanheira"><img class="imgHabilidades" src="./img/alg.png" alt="Simbolo Algorítimos." title="Clique em mim!"></a>
-              <a class="habLink" target="_blank" href="https://www.devmedia.com.br/certificado/tecnologia/javascript/luiz-otavio-da-silva-castanheira"><img class="imgHabilidades" src="./img/js.png" alt="Simbolo JavaScript." title="Clique em mim!"></a>
-              <a class="habLink" target="_blank" href="https://www.devmedia.com.br/certificado/tecnologia/node-js/luiz-otavio-da-silva-castanheira"><img class="imgHabilidades" src="./img/node.png" alt="Simbolo Node.Js." title="Clique em mim!"></a>
-            </div>
-            </div>
-        </section>
+    <div class="background"></div>
 
-        <!-- Seção Dos Trabalhos -->
-        <section id="trabalhos">
-            <div>
-                <h2 id="tituloTrabalhos">Acompanhe a evolução de meus trabalhos</h2>
-            </div>
-            <div class="quadro quadroCards">
-                    
-               <div class="card">
-                   <div>
-                    <h3>Receita de Bolo</h3>
-                    <img src="img/siteReceitaBolo300px.png" alt="Imagem Receita">
-                   </div>
-                   <div>
-                    <p>Foi minha primeira página, ainda para teste, pouco código HTML e CSS.</p>
-                    <a class="linkCard" target="_blank" href="trabalhos/bolochocolate/index.html">Visite a Página</a>
-                    <a class="linkCard" target="_blank" href="https://github.com/luizoscastanheira/Portfolio/tree/main/bolochocolate">Veja o Código</a>
-                    </div>
-               </div>
-               <div class="card">
-                   <div>
-                    <h3>Padaria</h3>
-                    <img src="img/sitePadaria320px.png" alt="Imagem Padaria">
-                   </div>
-                   <div>
-                    <p>Página feita com alguns recursos CSS a mais, projeto ainda muito simples e direto.</p>
-                    <a class="linkCard" target="_blank" href="trabalhos/padaria-plus/index.html">Visite a Página</a>
-                    <a class="linkCard" target="_blank" href="https://github.com/luizoscastanheira/Portfolio/tree/main/padaria-plus">Veja o Código</a>
-                   </div>
-               </div>
-               <div class="card">
-                   <div>
-                    <h3>Agencia de Viagens</h3>
-                    <img src="img/siteAgencia300px.png" alt="Imagem Agencia">
-                   </div>
-                   <div>
-                    <p>Página feita com intuito de trabalhar a construção e o envio de dados através de formulário. Nesse projeto já se fez um ensaio de responsividade</p>
-                    <a class="linkCard" target="_blank" href="trabalhos/agencia-de-viagens/index.html">Visite a Página</a>
-                    <a class="linkCard" target="_blank" href="https://github.com/luizoscastanheira/Portfolio/tree/main/agencia-de-viagens">Veja o Código</a>
-                   </div>
-               </div>
-               <div class="card">
-                   <div>
-                    <h3>Clínica Médica</h3>
-                    <img src="img/siteClinica300px.png" alt="Imagem Clínica">
-                   </div>
-                   <div>
-                    <p>Primeira página a focar a responsividade, ou seja, adaptação visual dos componentes a diferentes tamanhos de tela.</p>
-                    <a class="linkCard" target="_blank" href="./trabalhos/clinica-medica/index.html">Visite a página</a>
-                    <a class="linkCard" target="_blank" href="https://github.com/luizoscastanheira/Portfolio/tree/main/clinica-medica">Veja o Código</a>
-                   </div>
-               </div>
-               <div class="card">
-                <div>
-                    <h3>JS - Salário/IPCA </h3>
-                    <img src="img/telaSalarios300px.png" alt="Imagem Tela de Salários">
-                </div>
-                <div>
-                    <p>O inicio do JavaScript!!! Um exemplo de aplicação que trabalha com coleções de dados e menu de opções.<br>Vai rodar em terminal via Node.Js.</p>
-                    <a class="linkCard" target="_blank" href="img/telaSalarios.png">Imagem Ampliada</a>
-                    <a class="linkCard" target="_blank" href="https://github.com/luizoscastanheira/Portfolio/tree/main/JavaScript/compSalarioInflacao">Veja o Código</a>
-                </div>
-            </div>
-                               
-            </div>
-        </section>
-        
-        <!-- Seção do Rodapé -->
-        <footer id="contato">
-            <p>Desenvolvido por<br>Luiz Otávio</p>
-            <p>--------- Faça Contato ---------</p>
-            <p><a id="meuEmail" href="mailto:luizoscastanheira@hotmail.com.br">luizoscastanheira@hotmail.com.br</a><br>Tel.: +5524981839564</p>
-        </footer>
-    </body>
+    <main class="conteudo">
+        <h1>Luiz Otávio - Portfólio</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Perferendis reiciendis ullam porro recusandae laudantium obcaecati eius, 
+        itaque illum enim eligendi consequatur consequuntur eos! Sit vel provident 
+        iste recusandae aliquid eveniet.
+        </p>
+    </main>
+</body>
+<script src="./scripts/script.js"></script>
 </html>

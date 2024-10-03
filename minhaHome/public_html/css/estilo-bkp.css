@@ -58,10 +58,17 @@
     font-weight: bold;
     padding: 10px;
     background-color: #0200006e;
-    width: 90%;
+    width: auto;
     height: 40px;
     border-radius: 15px;
+    display: flex;
+    gap: 20px;
+    justify-content: left;
 }
+.itemLink img{
+    width: 20px;
+}
+
 /* Criando o Efeito nos botões de link */
 .itemLink:hover { 
     color: #000000;
@@ -160,7 +167,7 @@
 /* Estilizando os cards */
 .card {
     width: 350px;
-    height: 350px;
+    min-height: 350px;
     background-color: #596d136e;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -185,6 +192,7 @@
     text-decoration: none;
     color: rgb(60, 58, 107);
     font-size: 18;
+    
     
 }
 
@@ -235,9 +243,15 @@ footer {
         width: auto;
         text-align: justify;
         font-size: 11px;
+        padding: 15px;
     }
     .quadro{
         width: auto;
+    }
+
+    .quadroArtigos {
+        width: 95%;
+        margin: 10px 10px;
     }
     
     #quadroHabilidades {
@@ -253,7 +267,7 @@ footer {
     }
 
     .card img{
-        width: 90%;
+        width: 80%;
     }
     
     /* Rodapé */
