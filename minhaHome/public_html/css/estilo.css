@@ -5,18 +5,20 @@
     --text-color: #ecf0f1;
     --text-secondary-color: #000f1f;
     --background-color: #34495e;
+    
 }
 
 /*
 Reset dos estilos
 */
 
-*{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+    background-color: var(--text-color);
+    transition: var(--background-color) 0.5s ease; /* animação */
 }
 
 /* Estilizando o menu lateral */
@@ -29,6 +31,7 @@ Reset dos estilos
     background-color: var(--background-color);
     z-index: 5; /* trazendo o elemento mais para frente */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.25, 1.55) ; /* animação */
 }
 /* Classe que vai ativar o menu (será usada pelo JavaScript) */
 .menu-lateral.ativo {
@@ -84,11 +87,11 @@ Reset dos estilos
     border: none;
     padding: 10px 15px;
     color: var(--text-color);
+    transition: all 0.5s ease; /* animação */
 }
 .botao-menu:hover{
     background-color: var(--secundary-color);
 }
-
 .botao-menu.ativo{
     left: 320px;
 }
@@ -98,9 +101,10 @@ Reset dos estilos
     margin-left: 80px;
     padding: 40px;
     color: var(--text-secondary-color);
+    transition: all 0.5s ease; /* animação */
 }
 .conteudo.ativo{
-    margin-left: 320px;
+    margin-left: 380px;
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -121,3 +125,5 @@ Reset dos estilos
     opacity: 1;
     visibility: visible;
 }
+
+/* Criando as animações*/

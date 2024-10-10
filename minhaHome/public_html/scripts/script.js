@@ -8,11 +8,12 @@ const background = document.querySelector('.background')
 
 // Criando um evento para observar o botão
 // usamos uma arrow function para facilitar e adicionar a classe ativo aos elementos
+// vamos usar .toggle no lugar .add pois o toogle verifica se há a classe ele tira, se nãi há ele adiciona
 botao.addEventListener('click', () => {
-    menuLateral.classList.add('ativo')
-    botao.classList.add('ativo')
-    conteudo.classList.add('ativo')
-    background.classList.add('ativo')
+    menuLateral.classList.toggle('ativo')
+    botao.classList.toggle('ativo')
+    conteudo.classList.toggle('ativo')
+    background.classList.toggle('ativo')
     document.body.style.backgroundColor = menuLateral.classList.contains('ativo') ? '#34495e' : '#ecf0f1'
 })
 
