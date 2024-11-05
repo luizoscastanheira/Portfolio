@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Dólar</title>
+</head>
+<body>
+
+    <h1>Conversor de Dólar</h1>
+    <input placeholder="Valor em Reais:" type="number">
+    <button onclick="converter()">Converter!</button>
+    <label id="resultadoLabel">Resultado:</label>
+</body>
+<script>
+    // Acessando elementos do DOM - do HTML no te a sintaxe abaixo
+    const valorReal = document.querySelector("input")
+    
+    // Criando as funções - Script embutido na página
+    function converter(){
+        // Capturando o CONTEUDO do input com o .value adicionado à variável valorReal
+        const valorConvertido = valorReal.value  / 5
+        alert(`O Valor em dólar é ${valorConvertido} dólares.`) // cria uma janela de alerta com o resultado
+        // Testando uma modificação direta de um estilo
+        document.querySelector("h1").style.color = "red"
+        // Várias formas abaixo de inserir o resultado em outro elemento:
+        //document.getElementById("resultadoLabel").innerHTML = "Resultado: " + valorConvertido;
+        //document.getElementById("resultadoLabel").textContent = "Resultado: " + valorConvertido;
+        //document.querySelector("label").textContent = "Resultado é: " + valorConvertido
+        document.querySelector("label").innerHTML = "Resultado é: " + valorConvertido
+    }
+</script>
+</html>
