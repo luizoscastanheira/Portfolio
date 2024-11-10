@@ -7,7 +7,24 @@
     text-decoration: none;
 }
 
-/* Estilizando a Seção Banner */
+/*
+    Estilizando o Alerta
+*/
+
+.section_topo_alerta{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #3c184e; 
+}
+.section_topo_alerta p{
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* 
+    Estilizando a Seção Banner 
+*/
 .section_banner {
     width: 100%;
     height: auto;
@@ -39,7 +56,6 @@
 
 /* Estilizando o segundo box da seção */
 .container_texto{
-    width: 100%;
     max-width: 1024px;
     border-radius: 10px;
     padding: 40px;
@@ -47,3 +63,163 @@
     background-color: #ffffffc4;
     box-shadow: 0 8px 32px #1f26875e; 
 }
+
+.container_texto h1{
+    font-size: 60px;
+    color: #3C184E;
+    text-align: center;
+    font-weight: 800;
+    margin: 0 0 40px 0;
+}
+
+.container_texto p{
+    width: 200px;
+    padding: 10px 25px 10px 25px;
+    margin: 0 auto 0;
+    border-radius: 10px;
+    background-color: #3C184E;
+    font-size: 20px;
+    text-align: center;
+}
+.container_texto p a{
+    color: #ffff;
+}
+
+.container_texto p a img{
+    width: 20px;
+    margin-left: 5px;
+}
+
+/* 
+    Estilizando a Seção Serviços 
+*/
+.section_servicos{
+    width: 100%;
+    padding: 120px 80px 120px 80px;
+}
+
+.section_servicos h3{
+    font-size: 36px;
+    color: #3c184e;
+    text-align: center;
+    margin: 0 0 45px 0;
+}
+/* Container Texto */
+.container_lista{
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color:#3C184E;
+}
+.container_lista ul{
+    list-style-type: square;
+}
+.container_lista ul li{
+    font-size: 20px;
+    margin: 0 0 20px;
+}
+.container_lista span{
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Container Imagens */
+.container_imagens{
+    max-width: 800px;
+    margin: 0 auto 0;
+    align-content: center;
+}
+.container_imagens img{
+    border-radius: 5px;
+    box-shadow: 3px 6px 10px 6px #0000005c;
+}
+
+/*
+    Estilizando a Seção de Faixas 
+*/
+.section_faixa{
+    padding: 120px 80px;
+    background-color: #3c184e;
+    text-align: center;
+}
+/* Estilizando os parágrafos */
+.section_faixa p{
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+}
+.section_faixa span{
+    font-weight: 700;
+    font-style: italic;
+}
+.section_faixa div{
+    text-align: center;
+}
+.section_faixa div a img{
+    width: 50px;
+    height: 50px;
+}
+
+/*
+    Estilizando a Seção Marcas
+*/
+.section_marcas{
+    width: 100%;
+    padding: 120px 80px;
+}
+.section_marcas h3{
+    font-size: 36px;
+    color: #3C184E;
+    text-align: center;
+    margin: 0 0 45px;
+}
+.section_marcas div{
+    max-width: 800px;
+    margin: 0 auto 0;
+}
+.section_marcas div img{
+    width: 148px;
+    height: 148px;
+    margin: 0 15px;
+}
+
+/*
+    Estilizando a Seção Onde Estamos
+*/
+.section_onde_estamos{
+    width: 100%;
+    padding: 120px 80px;
+    text-align: center;
+}
+.section_onde_estamos h3{
+    font-size: 36px;
+    color: #3C184E;
+    text-align: center;
+    margin: 0 0 45px;
+}
+.section_onde_estamos p{
+    font-size: 20px;
+    color: #3c184e;
+    text-align: center;
+    margin: 0 0 45px;
+}
+.section_onde_estamos iframe{
+    width: 800px;
+    height: 450px;
+}
+
+/*
+    Estilizando o Rodapé
+*/
+.section_rodape{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #3c184e;
+}
+.section_rodape p{
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
