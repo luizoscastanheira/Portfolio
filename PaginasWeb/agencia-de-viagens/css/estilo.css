@@ -4,6 +4,18 @@
     padding: 0;
 }
 
+/* Estilizando o alerta */
+.section_topo_alerta{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #3c184e; 
+}
+.section_topo_alerta p{
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
 /* Estilizando o corpo geral da página */
 body{
     background-color: #80808029;

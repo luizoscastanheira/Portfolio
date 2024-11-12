@@ -11,7 +11,17 @@
 
 body{
     font-family: 'Source Sans Pro',sans-serif;
-    
+}
+
+.section_topo_alerta{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #3c184e; 
+}
+.section_topo_alerta p{
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
 }
 
 .containerGeral { /* pode ser usado para outras areas do site */

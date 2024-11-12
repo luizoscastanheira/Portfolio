@@ -5,6 +5,17 @@ body {
     font-family: 'Tahoma';
 }
 
+.section_topo_alerta{
+    width: 100%;
+    padding: 1px 0px;
+    background-color: #3c184e; 
+}
+.section_topo_alerta p{
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
 div {
     padding-top: 30px;
     padding-bottom: 30px;

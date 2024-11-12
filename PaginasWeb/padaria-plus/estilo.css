@@ -1,3 +1,15 @@
+.section_topo_alerta{
+    width: 100%;
+    padding: 2px 0px;
+    background-color: #3c184e; 
+}
+.section_topo_alerta p{
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
+
 .secao {
     width: 700px;
     margin: 20px auto;
