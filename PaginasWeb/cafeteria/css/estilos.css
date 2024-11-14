@@ -2,37 +2,153 @@
 *   Reset de página
 */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 /* Seção Topo (header) */
 #header_container {
     width: 100%;
-    height: 100px;
-    display: flex;
+    height: 10vh;
+    top: 0;
+    left: 0;
     justify-content: space-around;
     align-items: center;
     background-color: #604829;
     position: fixed;
-    top: 0;
-    left: 0;
+    z-index: 1;
+    
 }
 #header_container img {
     width: 100px;
-    height: 100px;
+    position: relative;
+    top: 5px;
+    left: 15%;
+}
+
+#header_container div {
+    position: absolute;
+    top: 30%;
+    right: 15%;
+}
+
+#header_container a {
+    font-family: 'Oswald', sans-serif;
+    margin: 0 20px;
+    color: #c4a47c;
+    text-shadow: 3px 5px 2px #000000;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* 
+* Estilizando a seção do Banner
+*/
+#section_banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/parallax-imagem1.png');
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#section_banner h1{
+    top: 45%;
+    right: 0;
+    left: 0;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-family: "Fraunces", serif;
+    text-shadow: 3px 5px 3px #000000;
+    font-size: 70px;
+}
+
+/*
+*   Estilizando a Seção Informações e subseções
+*/
+
+.mainContainer{
+    width: 100%;
+}
+
+.textoContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    
+}
+.textoContainer h2{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    color:#c4a47c
+}
+.textoContainer p{
+    width: 75%;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    color:#666;
+}
+
+#banner1 {
+    background-image: url('../assets/parallax-imagem2.jpg');
+}
+
+#banner2 {
+    background-image: url('../assets/parallax-imagem3.jpg');
+}
+
+.parallaxContainer{
+    width: 100%;
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallaxContainer h3{
+    width: fit-content;
+    padding: 10px 20px;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    background-color: #604829;
+    color: #fff;
 }
 
 
 
-/* Estilizando a seção do Banner*/
-#section_banner{
-    margin-top: 100px;
-    width: 100%;
-    height: 100vh;
-    background-image: url('../assets/parallax-imagem1.png');
-    background-size: cover;
-    background-position: fixed;
+
+
+/* Estilo da seção Horário */
+
+
+.listaItem{
+    display:flex;
+    gap:10px;
+    align-items: center;
+}
+
+.linhaHorizontal {
+    width: 30%;
+    border-top: dotted 3px black;
 }
