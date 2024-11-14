@@ -11,8 +11,10 @@
     <title>Cafeteria</title>
 </head>
 <body>
+    
     <!-- Seção correspondente ao Top da página -->
     <header id="header_container">
+        <p>Atenção! Este é um site fictício apenas para fins didáticos.</p>
         <img src="./assets/logo.ico" alt="Imagem do Logotipo da Cafeteria.">
         <div>
             <a class="topo_link" href="#informacoes">INFORMAÇÕES</a>
@@ -87,13 +89,15 @@
     <!-- Seção Contatos -->
     <section id="contatos">
         <h2>Contatos & Endereços</h2>
-        <iframe></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.116814553211!2d-43.36346792602763!3d-22.98273154058699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda2ed54ec2e1%3A0x4431d262cad1d163!2sAv.%20Ayrton%20Senna%2C%203000%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022775-003!5e0!3m2!1spt-BR!2sbr!4v1731611586508!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div>
             <p>Telefone & Whatsapp: (21) 99999-5555</p>
             <p>E-mail: contato@manhattan.com.br</p>
             <p>Endereço: Av Ayrton Senna, 3000 - Barra da Tijuca - Rio de Janeiro</p>
         </div>
     </section>
+
+    <!-- Seção Horários -->
     <section id="horarios">
         <h2>HORARIOS DE FUNCIONAMENTO</h2>
         <div class="containerHorarios">
@@ -101,20 +105,20 @@
                 <li class="listaItem">
                   <h3>SEGUNDA</h3><hr class="linhaHorizontal"><p>12:00 - 22:00</p>
                 </li>
-                <li class="listaItem">
-                  <h3 >TERÇA</h3><hr class="linhaHorizontal"><p>09:00 - 22:00</p>
+                <li class="listaItem"><!-- O recurso &nbsp adiciona um espaço em branco -->
+                  <h3 >TERÇA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3><hr class="linhaHorizontal"><p>09:00 - 22:00</p>
                 </li>
                 <li class="listaItem">
-                  <h3>QUARTA</h3><hr class="linhaHorizontal"><p>09:00 - 22:00</p>
+                  <h3>QUARTA &nbsp;&nbsp;</h3><hr class="linhaHorizontal"><p>09:00 - 22:00</p>
                 </li>
                 <li class="listaItem">
-                  <h3>QUINTA</h3><hr class="linhaHorizontal"><p>09:00 - 22:00</p>
+                  <h3>QUINTA &nbsp;&nbsp;&nbsp;&nbsp;</h3><hr class="linhaHorizontal"><p>09:00 - 22:00</p>
                 </li>
                 <li class="listaItem">
-                  <h3>SEXTA</h3><hr class="linhaHorizontal"><p>09:00 - 22:00</p>
+                  <h3>SEXTA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3><hr class="linhaHorizontal"><p>09:00 - 14:00</p>
                 </li>
                 <li class="listaItem">
-                  <h3>SÁBADO</h3><hr class="linhaHorizontal"><span class="texto-marrom">FECHADO</span>
+                  <h3><span class="textoMarrom">SÁBADO</span></h3><hr class="linhaHorizontal"><span class="textoMarrom">FECHADO</span>
                 </li>
                 <li class="listaItem">
                   <h3>DOMINGO</h3><hr class="linhaHorizontal"><p>12:00 - 22:00</p>
@@ -122,11 +126,15 @@
               </ul>
         </div>
     </section>
+    
+    <!-- Seção Rodapé -->
     <footer>
         <div>
             <p>&copy; Manhattan - Coffee House - Todos os direitos reservados</p>
-            <p>Desenvolvido por "Luiz Otávio"</p>
+            <p>Desenvolvido por <span id="dev">"Luiz Otávio"</span></p>
         </div>
+        <a href="#section_banner"><img id="linkBack" src="./assets/seta-para-cima.png"></a>
+        
     </footer>
 </body>
 </html>

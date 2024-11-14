@@ -9,7 +9,9 @@
     text-decoration: none;
 }
 
-/* Seção Topo (header) */
+/* 
+*   Estilizando a Seção Topo (header) 
+*/
 #header_container {
     width: 100%;
     height: 10vh;
@@ -24,8 +26,8 @@
 }
 #header_container img {
     width: 100px;
-    position: relative;
-    top: 5px;
+    position: absolute;
+    top: 0px;
     left: 15%;
 }
 
@@ -42,6 +44,9 @@
     text-shadow: 3px 5px 2px #000000;
     letter-spacing: 2px;
     font-weight: 700;
+}
+#header_container p{
+    color: #c4a47c;
 }
 
 /* 
@@ -73,7 +78,6 @@
 /*
 *   Estilizando a Seção Informações e subseções
 */
-
 .mainContainer{
     width: 100%;
 }
@@ -133,22 +137,113 @@
     font-style: italic;
     background-color: #604829;
     color: #fff;
+    border-radius: 5px;
 }
 
+/*
+*   Estilizando a Seção Contatos
+*/
+#contatos {
+    width: 100%;
+    height: 110vh;
+    background-image: url('../assets/parallax-imagem4.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
 
+#contatos h2{
+    background-color: #604829;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    padding: 10px 100px;
+    border-radius: 5px;
+}
 
+#contatos iframe{
+    width: 60%;
+}
 
+#contatos p{
+    background-color: #604829;
+    color: #fff;
+    padding: 5px 30px;
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 3px 5px 3px #000000;
+    text-align: center;
+}
 
-/* Estilo da seção Horário */
-
-
+/* 
+*   Estilizando a seção Horário 
+*/
+#horarios{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    font-family: 'Oswald';
+    background-image: url('../assets/cafeteria.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#horarios h2{
+    font-size: 18px;
+    color: #fff;
+}
+.containerHorarios{
+    width: 800px;
+    padding: 15px;
+    color: #acacac;
+}
+.listaHorarios{
+   display:flex;
+   flex-direction: column;
+   gap:10px;
+   justify-content: space-around;
+   font-size: 16px;
+}
 .listaItem{
     display:flex;
     gap:10px;
     align-items: center;
+    justify-content: space-evenly;
+}
+.linhaHorizontal {
+    width: 70%;
+    border-top: solid 1px black;
+}
+.textoMarrom{
+    color:#604829;
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.linhaHorizontal {
-    width: 30%;
-    border-top: dotted 3px black;
+/*
+*   Estilizando o Rodapé
+*/
+footer{
+    width: 100%;
+    height: 10vh;
+    padding: 10px;
+    text-align: center;
+    background-color: #000000;
+    color: #acacac;
+    position: relative;
+}
+#dev{
+    color: #c4a47c;
+}
+#linkBack{
+    position: absolute;
+    top: -25px;
+    right: 30px;
 }
