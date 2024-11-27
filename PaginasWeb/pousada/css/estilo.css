@@ -1,0 +1,165 @@
+/* Reset de estilos - página principal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+ body{
+    font-family: 'Source San Pro', sans-serif;
+}
+
+/* Estilizando o Topo */
+#containerTopo{
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#containerBaseTopo{
+    margin: 30px auto;
+    width: 1024px;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+#secreta{
+    color:blue;
+    font-weight: bold;
+}
+
+#containerLinks{
+    display:flex;
+    gap:20px;
+    color: black;
+}
+
+/* Estilizando a seção principal */
+.secaoPrincipal {
+    margin-top: 10vh;
+}
+
+/* Estilizando a Seção Banner */
+#sectionBanner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/img-fundo.jpg');
+    background-size: cover;
+    background-position: fixed;
+}
+#boxTextoBanner{
+    width: 40%;
+    height: 40%;
+    background-color: rgba(115, 136, 167, 0.55);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+#boxTextoBanner h1 {
+    color: aliceblue;
+    font-size: 40px;
+    font-weight: bold;
+}
+#boxTextoBanner p {
+    color: aliceblue;
+    font-size: 20px;
+}
+
+/* Estilizando As caixas de texto de secões */
+.boxTexto {
+    margin: 0 auto;
+    width: 1024px;
+    max-width: 1024px;
+    height: 50vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.boxTexto h2{
+    font-size: 30px;
+}
+.boxTexto p{
+    font-size: 20px;
+}
+
+/* Estilizando a seção quartos */
+.imgCardQuartos{
+    width: 300px;
+}
+.boxQuartos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.cardQuartos{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.linkCardQuartos {
+    width: 100%;
+    font-size: 20px;
+    color: black;
+    border-bottom: 3px solid blue;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+/* Estilizando o mapa */
+#mapa {
+    width: 100%;
+}
+
+/* Estilizando a secão de Sobre - acomodações */
+/* Imagens */
+.imgCardSobre {
+    width: 275px;
+    height: 183px;
+}
+.containerCardSobre {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.cardSobre {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardSobre h3{
+    padding: 5px;
+}
+
+.cardSobre p{
+    width: 90%;
+    text-align: justify;
+    padding: 5px;
+}
+
+/*
+*    Estilizando o Rodapé
+*/
+#secaoRodape {
+    width: 100%;
+}
+

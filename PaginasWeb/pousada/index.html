@@ -7,13 +7,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/estilo.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap">
+        <!-- Importando fonts do Google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- Topo da página -->
         <header id="containerTopo">
-            <div is="containerBase">
+            <div id="containerBaseTopo">
                 <div id="containerLogo">
-                    <a href="#containerTopo">POUSADA <span>SECRETA</span></a>
+                    <a href="index.html">POUSADA <span id="secreta">SECRETA</span></a>
                 </div>
                 <div id="containerLinks">
                     <a href="#secaoSobre">SOBRE</a>
@@ -24,7 +28,7 @@
         </header>
 
         <!-- Seção Principal -->
-        <main>
+        <main class="secaoPrincipal">
             <!-- Seção do Banner -->
             <section id="sectionBanner">
                 <div id="boxTextoBanner">
@@ -36,21 +40,21 @@
             <!-- Seção das acomodações -->
             <div class="boxTexto">
                 <h2>SEJA BEM-VINDO(A)!!</h2>
-                <p>Relaxe em nossa acomodações e curta o melhor de Angra dos Reis.</p>
+                <p>Relaxe em nossas acomodações e curta o melhor de Angra dos Reis.</p>
                 <p>Temos quartos para solteiro, casal ou família.</p>
             </div>
                    
             <div class="boxQuartos">
-                <div class="containerCardQuartos">
-                    <img src="./assets/quarto-solteiro1.jpg" alt="Imagem de cama de Solteiro." class="imgCarQuartos">
+                <div class="cardQuartos">
+                    <img src="./assets/quarto-solteiro1.jpg" alt="Imagem de cama de Solteiro." class="imgCardQuartos">
                     <a href="#" class="linkCardQuartos">Quarto de Solteiro</a>
                 </div>
                 <div class="cardQuartos">
-                    <img src="./assets/quarto-casal1.jpg" alt="Imagem de cama de casal." class="imgCarQuartos">
+                    <img src="./assets/quarto-casal1.jpg" alt="Imagem de cama de casal." class="imgCardQuartos">
                     <a href="#" class="linkCardQuartos">Quarto de Casal</a>
                 </div>
                 <div class="cardQuartos">
-                    <img src="./assets/quarto-familia1.jpg" alt="Imagem de cama de casal e solteiro." class="imgCarQuartos">
+                    <img src="./assets/quarto-familia1.jpg" alt="Imagem de cama de casal e solteiro." class="imgCardQuartos">
                     <a href="#" class="linkCardQuartos">Quarto Família</a>
                 </div>
             </div>
@@ -61,20 +65,21 @@
                 <p>Veja como chegar até a pousada.</p>
             </div>
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24708.98764200054!2d-43.381200426503085!3d-22.986549857934705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda2ed54ec2e1%3A0x4431d262cad1d163!2sAv.%20Ayrton%20Senna%2C%203000%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022775-003!5e0!3m2!1spt-BR!2sbr!4v1731853263053!5m2!1spt-BR!2sbr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24708.98764200054!2d-43.381200426503085!3d-22.986549857934705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda2ed54ec2e1%3A0x4431d262cad1d163!2sAv.%20Ayrton%20Senna%2C%203000%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022775-003!5e0!3m2!1spt-BR!2sbr!4v1731853263053!5m2!1spt-BR!2sbr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
             <!-- Seção Sobre -->
             <div id="secaoSobre" class="boxTexto">
                 <h2>SOBRE A POUSADA</h2>
                 <p>Conheça um pouco sobre nossa pousada.</p>
             </div>
+            
             <div class="containerCardSobre">
                 <div class="cardSobre">
                     <div>
                         <h3>A Pousada</h3>
                         <p>A Pousada Dev dispõe de estacionamento provativo gratuito, piscina ao ar livre e ar-condicionado</p>
                     </div>
-                    <img src="./assets/img1.jpg" alt="Imagem do exterior, piscina.">
+                    <img src="./assets/img1.jpg" alt="Imagem do exterior, piscina." class="imgCardSobre">
                 </div>
 
                 <div class="cardSobre">
@@ -82,10 +87,48 @@
                         <h3>Nossos Quartos</h3>
                         <p>O quartos possuem TV de tela plano, à cabo. Cozinha compacta e área de refeições. Além disso a unidades contam com ar-condicionado.</p>
                     </div>
-                    <img src="./assets/img2.jpg" alt="Imagem do exterior, piscina.">
+                    <img src="./assets/img2.jpg" alt="Imagem do exterior, piscina." class="imgCardSobre">
+                </div>
+
+                <div class="cardSobre">
+                    <div>
+                        <h3>Alimentação</h3>
+                        <p>A pousada serve café da manhã em estilo continetal ou buffet. Nosso restaurantes funcionam 24 horas.</p>
+                    </div>
+                    <img src="./assets/img3.jpg" alt="Imagem do exterior, piscina." class="imgCardSobre">
+                </div>
+
+                <div class="cardSobre">
+                    <div>
+                        <h3>Recepção</h3>
+                        <p>Nossa recepção fica aberta 24 horas.</p>
+                    </div>
+                    <img src="./assets/img5.jpg" alt="Imagem do exterior, piscina." class="imgCardSobre">
                 </div>
             </div>
         </main>
-
-        <footer></footer>
+        <!-- Seção Rodapé -->
+        <footer id="secaoRodape">
+            <div class="containerElementos">
+                <div class="boxElementos">
+                    <div>
+                        <h4>Entre em Contato<br/> conosco:</h4>
+                    </div>
+                    <div>
+                        <img src="./assets/icones/endereco.png" alt="Imagem de um icnone de Mapa.">
+                        <p>Endereço: Av123, 22 <br/> Rio de Janeiro RJ</p>
+                    </div>
+                    <div>
+                        <img src="./assets/icones/telefone.png" alt="Imagem de ícone de um telefone.">
+                        <p>+5521 9999999</p>
+                    </div>
+                    <div>
+                        <img src="./assets/icones/calendario.png" alt="Imagem de um ícone de calendário.">
+                        <p>Faça sua reserva pelo <br/><a href="https://www.booking.com" target="_blank">Booking.com</a></p>
+                    </div>
+                </div>
+                <div>Copyright - PousadaDev</div>
+            </div>
+            
+        </footer>
 </html>
