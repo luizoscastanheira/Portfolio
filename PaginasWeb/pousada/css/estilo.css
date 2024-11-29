@@ -130,8 +130,8 @@
 /* Estilizando a secão de Sobre - acomodações */
 /* Imagens */
 .imgCardSobre {
-    width: 275px;
-    height: 183px;
+    width: 200px;
+    height: 150px;
 }
 .containerCardSobre {
     width: 100%;
@@ -161,5 +161,29 @@
 */
 #secaoRodape {
     width: 100%;
+    background-color: rgb(78, 132, 96);;
+    color: white;
+}
+.boxElementos {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    gap:10px;
+    justify-content: space-around;
+    align-items: center;
+    padding:10px;
+    margin-top: 50px;
+}
+
+.cardFooter {
+    display:flex;
+    gap: 5px;
+}
+
+#copy{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid;
 }
 
