@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversores</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Conversores Diversos</h1>
+    </header>
+    <section>
+        <h2>Temperatura</h2>
+        <div>
+            <h3>Celsius para Fahreinheit</h3>
+            <form id="tempForm">
+                <fieldset>
+                    <label>Insira o Valor em Graus Celsius:</label>
+                    <input
+                        id="celsiusInput"
+                        type="text"
+                        name="valor"
+                        placeholder="Digite um valor numérico."
+                        value=""
+                    />
+                    <button type="submit">Enviar</button> 
+                    <input 
+                    id="respostaInput"
+                    value="" 
+                    type="text"
+                    placeholder="RESPOSTA"
+                    readonly
+                    />
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <section>
+        <h2>Moeda</h2>
+        <div>
+            <h3>Real para Dólar</h3>
+            <form>
+                <fieldset>
+                    <label>Insira o Valor em Graus Celsius:</label>
+                    <input
+                        
+                        type="number"
+                        name="valor"
+                        placeholder="Digite um valor numérico."
+                        value=""
+                    />
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('tempForm').addEventListener('submit', function(event){
+           event.preventDefault();
+           let valor = document.getElementById('celsiusInput').value;
+           console.log(" valor enviado: ", valor)
+
+           fetch(`http://192.168.1.14:8080/celsius?valor=${valor}`)
+            .then(response => {
+                console.log("Resposta da API recebid", response);
+                return response.json();
+            })
+            .then(data => {
+                console.log("Dados Recebido", data);
+                document.getElementById('respostaInput').value = data.resposta;
+            })
+            .catch(error => console.log('Erro: ', error));
+        });
+    </script>
+</body>
+
+</html>
