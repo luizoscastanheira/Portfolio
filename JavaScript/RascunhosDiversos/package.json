@@ -1,0 +1,13 @@
+{
+  "name": "rascunhosdiversos",
+  "version": "1.0.0",
+  "type":"module",
+  "main": "array_colecoes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -3,7 +3,7 @@ function efetuarCalculoIMC(peso, altura){
     return imc;
 };
 
-function restornaStatusIMC(imc){
+function retornaStatusIMC(imc){
     let status;
     if(imc < 18.5){
         status = 'Abaixo do peso.';
@@ -20,5 +20,14 @@ function restornaStatusIMC(imc){
     return status;
 }
 
+function validaParametro(parametro){
+    if(isNaN(parametro)){
+        return false;
+    }else{
+        return true;
+    }
+}
+
+exports.validaParametro = validaParametro;
 exports.efetuarCalculoIMC = efetuarCalculoIMC;
-exports.restornaStatusIMC = restornaStatusIMC;
+exports.restornaStatusIMC = retornaStatusIMC;
