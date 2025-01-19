@@ -4,7 +4,6 @@
 import express from 'express';
 import { buscarUfPorId, buscarUfsPorNome, buscarUfs } from './servico/servico.js';
 
-
 const app = express();
 
 let data = new Date();
@@ -43,7 +42,7 @@ app.get("/ufs/:iduf", (req,res)=>{
             mensagemErro = "UF não encontrada!";
         }
     }else{
-        mensagemErro = "Requisição inválida!";
+        mensagemErro = "Requisição inválida ou Rota não encontrada!";
     }
 
     if (uf){
