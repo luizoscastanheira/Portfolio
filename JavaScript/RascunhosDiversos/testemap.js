@@ -10,16 +10,23 @@ const listaDeProdutos = [
     {id: 6, nome:"prato", valor: 12.00, categoria:"utensílio"},
 ];
 
+console.log(listaDeProdutos[0])
+console.log(listaDeProdutos)
+
 // Função MAP -  Cria um novo array a partir de um existente
 // não esquecer de passar uma função callback para que map funcione
 
 let ids = listaDeProdutos.map(listaDeProdutos => listaDeProdutos.id);
 let nome = listaDeProdutos.map(listaDeProdutos => listaDeProdutos.nome);
+let todos = listaDeProdutos.map(listaDeProdutos => listaDeProdutos);
 
 //testando map
 console.log(ids)
 console.log(nome)
+console.log(todos)
 
+
+//////////////////////////
 const numeros = [1,3,5,7,9];
 
 const duplicar = numeros.map(numeros => numeros * 2);
