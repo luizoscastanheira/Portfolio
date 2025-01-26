@@ -3,7 +3,7 @@
 // Segunda versão operacional mas com pesquisa em parametros 
 
 // Importando as funções
-import {buscarTodosDados, buscarPorAno, buscarPorId, reajustarValor} from "./servico/servico.js";
+import {buscarTodosDados, buscarPorAno, buscarPorId, reajustarPreco} from "./servico/servico.js";
 
 // Preparando o Express
 import express from 'express';
@@ -55,13 +55,3 @@ app.get("/historicoIPCA/:id", (req,res) => {
     };
 });
 
-// Rota 3 - para garar calculo
-app.get("/historicoIPCAcalc", (req,res) =>{
-    let valor = parseFloat(req.query.valor);
-    let mesInicial = parseInt(req.query.mesInicial);
-    let anoInicial = parseInt(req.query.anoInicial);
-    let mesFinal = parseInt(req.query.mesFinal);
-    let anoFinal = parseInt(req.query.anoFinal);
-
-    res.send(`${valor}...${mesInicial}...${anoInicial}...${mesFinal}...${anoFinal}`)
-});
