@@ -46,10 +46,18 @@ resultado = R$103,83
 
 */
 
+
+// teste da formula
+let resultado = 100 * ((1 + (1.24/100)) * (1 + (1.22/100)) * (1 + (1.32/100)))
+console.log(resultado)
+
+
 function reajustarValor(valor, mesInicial, anoInicial, mesFinal, anoFinal){
     
     
-    //console.log(`${valor}...${mesInicial}...${anoInicial}...${mesFinal}...${anoFinal}`)
+    console.log(`${valor}...${mesInicial}...${anoInicial}...${mesFinal}...${anoFinal}`)
+
+
 };
 // Testando
 reajustarValor(100,3,2015,5,2020)
