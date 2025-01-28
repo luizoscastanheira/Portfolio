@@ -1,4 +1,4 @@
-// Camada de Serviço com as funções
+////////////////// Camada de Serviço com as funções
 
 import historicoInflacao from "../dados/dbDados.js";
 
@@ -6,32 +6,27 @@ import historicoInflacao from "../dados/dbDados.js";
 const buscarTodosDados = () => {
     return historicoInflacao;
 };
-// Testando
-//console.log(buscarTodosDados());
+// Testando //console.log(buscarTodosDados());
 
 // 2 - Buscando os dados por Ano
 const buscarPorAno = (ano) => {
     let resultado = historicoInflacao.filter(objeto => objeto.ano === ano);
     return resultado;
 };
-// Testando
-//console.log(buscarPorAno(2015));
+// Testando //console.log(buscarPorAno(2015));
 
 // 3 - Buscando os dados por um ID
 const buscarPorId = (id) => {
     let resultado = historicoInflacao.find(objeto => objeto.id === id)
     return resultado;
 };
-// Testando
-//console.log(buscarPorId(34));
+// Testando //console.log(buscarPorId(34));
 
 // 4 - Calculando o reajuste de preço após passado um parâmetro
 /*
 Para realizar o reajuste sobre o valor fornecido pelo cliente, 
 é necessário seguir esta expressão:
-
 resultado = valor * ((1 + (ipca1/100)) * (1 + (ipca2/100)) * (1 + (ipcaN/100)))
-
 Por exemplo, suponhamos que o cálculo é um valor entre janeiro/2015 (IPCA = 1,24) e março/2015 (IPCA= 1,32) sobre um valor de R$100,00.
 
 Dados de IPCA do período:
@@ -43,32 +38,30 @@ Exemplo de cálculo: resultado = 100 * ((1 + (1,24/100)) * (1 + (1,22/100)) * (1
 resultado = R$103,83
 */
 
-// teste da formula
-let resultado = 100 * ((1 + (1.24/100)) * (1 + (1.22/100)) * (1 + (1.32/100)))
-console.log(resultado)
-
 // Função para reajuste de valor
 function reajustarValor(valor, mesInicial, anoInicial, mesFinal, anoFinal){
-    // Inicializando as variáveis de valor inicial e final
+    // Inicializando a variável
     let valorInicial = valor;
-    let valorReajustado = 0;
     // Capturando as posições de inicio e fim necessárias do array
     let indiceInicial = historicoInflacao.findIndex(historico => historico.ano === anoInicial && historico.mes === mesInicial)
     let indiceFinal = historicoInflacao.findIndex(historico => historico.ano === anoFinal && historico.mes === mesFinal)
     // Separando, fatiando a parte necessária do array baseado nos indices inicial e final    
     let selecionaColecao = historicoInflacao.slice(indiceInicial, indiceFinal+1)
-    console.log(selecionaColecao)
-    console.log(selecionaColecao.length)
-    // Executando os cálculos necessários
-    
-
-
+    ///// Executando os cálculos necessários
+    let calcMesMes = [];
+    for (let item of selecionaColecao){
+        let calc = 1 + (item.ipca / 100);
+        calcMesMes.push(calc);
+    };
+    // Testando o reduce para somar todo array
+    const totalParcial = calcMesMes.reduce( (acumulador, numeroAtual) =>{
+        return acumulador * numeroAtual;
+    } );
+    // Variável com valor final
+    let valorFinal = valorInicial * totalParcial;
     // Retorno da inforamação solicitada
-    return selecionaColecao
-    //return (`${valor}...${mesInicial}...${anoInicial}...${mesFinal}...${anoFinal}`)
+        return valorFinal.toFixed(2);
 };
-// Testando
-//reajustarValor(100,3,2015,5,2020)
 
 // Exportando as funções
 export {buscarTodosDados, buscarPorAno, buscarPorId, reajustarValor};

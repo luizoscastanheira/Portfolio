@@ -1,7 +1,8 @@
-// API RESTful dados IPCA
-
+/**
+ * API RESTful dados IPCA 
+ * 
+ */ 
 // Segunda versão operacional mas com pesquisa em parametros 
-
 // Importando as funções
 import {buscarTodosDados, buscarPorAno, buscarPorId, reajustarValor} from "./servico/servico.js";
 
@@ -17,31 +18,24 @@ app.listen(3000, () => {
     console.log("Servidor Ativado em: " + data)
 });
 
-// Criando as rotas da API
-
-// Rota1 - Raiz - Indicando servidor ativo
-app.get("/", (req,res) =>{
-    res.json({"status":"Servidor IPCA Rodando"});
-});
-
-// Rota 2 - para listar todos os dados
-app.get("/historicoIPCA", (req, res) => {
-    let ano = req.query.ano;
-    let testaAno = isNaN(ano);
-    let buscaAno = buscarPorAno(Number(ano));
-        
-    // Tratando Erro
-    if(!ano){
-        res.json(buscarTodosDados())
-    } else if (testaAno === true  || ano < 2015 || ano > 2023 ){
-        res.status(404).json({mensagem:"Ano não encontrado ou Inválido!"})
+/////////////////////////////// Criando as rotas da API
+// Rota - para gerar calculo
+app.get("/historicoIPCA/calculo", (req,res) =>{
+    let valor = parseFloat(req.query.valor);
+    let mesInicial = parseInt(req.query.mesInicial);
+    let anoInicial = parseInt(req.query.anoInicial);
+    let mesFinal = parseInt(req.query.mesFinal);
+    let anoFinal = parseInt(req.query.anoFinal);
+    // Tratando erro
+    if(isNaN(valor) || isNaN(mesInicial) || isNaN(anoInicial) || isNaN(mesFinal) || isNaN(anoFinal)){
+        res.send("Algum valor digitado é inválido, tente novamente")
     } else {
-        res.json(buscaAno);
+        let resultado = reajustarValor(valor, mesInicial, anoInicial, mesFinal, anoFinal);
+        res.json({resultado:resultado});
     };
-            
 });
 
-// Rota 3 - para buscar dados por ID
+// Rota - para buscar dados por ID
 app.get("/historicoIPCA/:id", (req,res) => {
     let id = Number(req.params.id);
     let buscaID = buscarPorId(id);
@@ -55,14 +49,22 @@ app.get("/historicoIPCA/:id", (req,res) => {
     };
 });
 
-// Rota 3 - para gerar calculo
-app.get("/historicoIPCAcalc", (req,res) =>{
-    let valor = parseFloat(req.query.valor);
-    let mesInicial = parseInt(req.query.mesInicial);
-    let anoInicial = parseInt(req.query.anoInicial);
-    let mesFinal = parseInt(req.query.mesFinal);
-    let anoFinal = parseInt(req.query.anoFinal);
-    
-    res.json(reajustarValor(valor, mesInicial, anoInicial, mesFinal, anoFinal))
-    
+// Rota - para listar todos os dados
+app.get("/historicoIPCA", (req, res) => {
+    let ano = req.query.ano;
+    let testaAno = isNaN(ano);
+    let buscaAno = buscarPorAno(Number(ano));
+    // Tratando Erro
+    if(!ano){
+        res.json(buscarTodosDados())
+    } else if (testaAno === true  || ano < 2015 || ano > 2023 ){
+        res.status(404).json({mensagem:"Ano não encontrado ou Inválido!"})
+    } else {
+        res.json(buscaAno);
+    };
+});
+
+// Rota  - Raiz - Indicando servidor ativo
+app.get("/", (req,res) =>{
+    res.json({"status":"Servidor IPCA Rodando"});
 });
