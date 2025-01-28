@@ -35,8 +35,8 @@ let filtraHistorico = historicoInflacao.findIndex( (historico) =>  historico.ano
 //console.log(filtraHistorico)
 
 ////////
-let indiceInicial = historicoInflacao.findIndex(historico => historico.ano === 2019 && historico.mes === 10)
-let indiceFinal = historicoInflacao.findIndex(historico => historico.ano === 2020 && historico.mes === 12)
+let indiceInicial = historicoInflacao.findIndex(historico => historico.ano === 2020 && historico.mes === 1)
+let indiceFinal = historicoInflacao.findIndex(historico => historico.ano === 2020 && historico.mes === 3)
 console.log(indiceInicial)
 console.log(indiceFinal)
 console.log(historicoInflacao[indiceInicial])
@@ -61,7 +61,7 @@ function reajustarValor(valor, mesInicial, anoInicial, mesFinal, anoFinal){
     //console.log(`${valor}...${mesInicial}...${anoInicial}...${mesFinal}...${anoFinal}`)
 };
 // Testando
-reajustarValor(121,2,2015,5,2020)
+reajustarValor(100,1,2015,1,2016)
 
 /*
     Para realizar o reajuste sobre o valor fornecido pelo cliente, 
@@ -72,3 +72,26 @@ reajustarValor(121,2,2015,5,2020)
 // Teste da Fórmula
 let resultado = 100 * ((1 + (1.24/100)) * (1 + (1.22/100)) * (1 + (1.32/100)))
 console.log(resultado.toFixed(2))
+
+
+let valorInicial = 100;
+let calcMesMes = [];
+
+for (let item of selecionaColecao){
+    let calc = 1 + (item.ipca / 100);
+    calcMesMes.push(calc);
+    console.log(calc);
+};
+
+console.log(calcMesMes);
+
+// Testando o reduce para somar todo array
+const totalParcial = calcMesMes.reduce( (acumulador, numeroAtual) =>{
+    return acumulador * numeroAtual
+} );
+
+console.log(totalParcial)
+let valorFinal = valorInicial * totalParcial
+console.log(valorFinal.toFixed(2))
+
+

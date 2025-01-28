@@ -55,13 +55,14 @@ app.get("/historicoIPCA/:id", (req,res) => {
     };
 });
 
-// Rota 3 - para garar calculo
+// Rota 3 - para gerar calculo
 app.get("/historicoIPCAcalc", (req,res) =>{
     let valor = parseFloat(req.query.valor);
     let mesInicial = parseInt(req.query.mesInicial);
     let anoInicial = parseInt(req.query.anoInicial);
     let mesFinal = parseInt(req.query.mesFinal);
     let anoFinal = parseInt(req.query.anoFinal);
-
-    res.send(`${valor}...${mesInicial}...${anoInicial}...${mesFinal}...${anoFinal}`)
+    
+    res.json(reajustarValor(valor, mesInicial, anoInicial, mesFinal, anoFinal))
+    
 });

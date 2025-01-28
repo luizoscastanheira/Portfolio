@@ -22,7 +22,6 @@ const buscarPorId = (id) => {
     let resultado = historicoInflacao.find(objeto => objeto.id === id)
     return resultado;
 };
-
 // Testando
 //console.log(buscarPorId(34));
 
@@ -42,26 +41,34 @@ Março 2015 = 1.32
 
 Exemplo de cálculo: resultado = 100 * ((1 + (1,24/100)) * (1 + (1,22/100)) * (1 + (1,32/100)))
 resultado = R$103,83
-
-
 */
-
 
 // teste da formula
 let resultado = 100 * ((1 + (1.24/100)) * (1 + (1.22/100)) * (1 + (1.32/100)))
 console.log(resultado)
 
-
+// Função para reajuste de valor
 function reajustarValor(valor, mesInicial, anoInicial, mesFinal, anoFinal){
+    // Inicializando as variáveis de valor inicial e final
+    let valorInicial = valor;
+    let valorReajustado = 0;
+    // Capturando as posições de inicio e fim necessárias do array
+    let indiceInicial = historicoInflacao.findIndex(historico => historico.ano === anoInicial && historico.mes === mesInicial)
+    let indiceFinal = historicoInflacao.findIndex(historico => historico.ano === anoFinal && historico.mes === mesFinal)
+    // Separando, fatiando a parte necessária do array baseado nos indices inicial e final    
+    let selecionaColecao = historicoInflacao.slice(indiceInicial, indiceFinal+1)
+    console.log(selecionaColecao)
+    console.log(selecionaColecao.length)
+    // Executando os cálculos necessários
     
-    
-    console.log(`${valor}...${mesInicial}...${anoInicial}...${mesFinal}...${anoFinal}`)
 
 
+    // Retorno da inforamação solicitada
+    return selecionaColecao
+    //return (`${valor}...${mesInicial}...${anoInicial}...${mesFinal}...${anoFinal}`)
 };
 // Testando
-reajustarValor(100,3,2015,5,2020)
-
+//reajustarValor(100,3,2015,5,2020)
 
 // Exportando as funções
 export {buscarTodosDados, buscarPorAno, buscarPorId, reajustarValor};

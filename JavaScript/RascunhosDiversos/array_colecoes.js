@@ -291,8 +291,5 @@ const historicoInflacao = [
   { id: 101, ano: 2023, mes: 5, ipca: 0.23 },
 ];
 
-
-
 // Exportando os array e coleções
-
 export {fatosHistoricos, numeros, palavras, dadosDeFuncionarios, listaDeProdutos, jogosExclusivos, listaProgramadores, listaCarros, listaSeries, historicoInflacao }
