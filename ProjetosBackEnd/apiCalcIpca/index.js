@@ -1,8 +1,10 @@
 /**
- * API RESTful dados IPCA 
+ * 
+ *                        API RESTful dados histórico de IPCA 
  * 
  */ 
-// Segunda versão operacional mas com pesquisa em parametros 
+// Versão operacional com pesquisa em parametros 
+
 // Importando as funções
 import {buscarTodosDados, buscarPorAno, buscarPorId, reajustarValor} from "./servico/servico.js";
 
@@ -18,7 +20,7 @@ app.listen(3000, () => {
     console.log("Servidor Ativado em: " + data)
 });
 
-/////////////////////////////// Criando as rotas da API
+////////////////////// Criando as rotas da API /////////////////////////
 // Rota - para gerar calculo
 app.get("/historicoIPCA/calculo", (req,res) =>{
     let valor = parseFloat(req.query.valor);
