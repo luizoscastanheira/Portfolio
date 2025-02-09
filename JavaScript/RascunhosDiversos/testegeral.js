@@ -95,3 +95,40 @@ let valorFinal = valorInicial * totalParcial
 console.log(valorFinal.toFixed(2))
 
 
+////////////////////
+
+function transformarFrase(frase) {
+    let palavras = frase.split(' ');
+    let novaFrase = '';
+  
+    for (let palavra of palavras) {
+         if (novaFrase !== '') {
+             novaFrase += ' ';
+         }
+         novaFrase += palavra[0].toUpperCase() + palavra.slice(1);
+    }
+    return novaFrase;
+  }
+  
+  console.log(transformarFrase("o rato roeu a roupa do rei de roma"));
+
+  /////
+
+  const livros = [
+    {titulo: 'Fundação', autor: 'Isaac Asimov', genero: 'Ficção Científica', categoria: 1},
+    {titulo: 'Neuromancer', autor: 'William Gibson', genero: 'Cyberpunk', categoria: 2},
+    {titulo: 'Duna', autor: 'Frank Herbert', genero: 'Ficção Científica', categoria: 1},
+    {titulo: 'A Máquina do Tempo', autor: 'H.G. Wells', genero: 'Ficção Científica', categoria: 1},
+    {titulo: 'Snow Crash', autor: 'Neal Stephenson', genero: 'Cyberpunk', categoria: 2},
+    {titulo: '2001: Uma Odisseia no Espaço', autor: 'Arthur C. Clarke', genero: 'Ficção Científica', categoria: 1},
+    {titulo: 'Nevasca', autor: 'Neal Stephenson', genero: 'Ficção Histórica', categoria: 3},
+    {titulo: 'Eu, Robô', autor: 'Isaac Asimov', genero: 'Ficção Científica', categoria: 1},
+    {titulo: 'Blade Runner', autor: 'Philip K. Dick', genero: 'Ficção Científica', categoria: 1},
+    {titulo: 'Jogador Número 1', autor: 'Ernest Cline', genero: 'Ficção Científica', categoria: 1}
+  ];
+
+const buscaLivros = livros.filter((livro) => livro.categoria === 1);
+console.log(buscaLivros)
+
+const buscarLivrosCategoria = ( livros ) => { livros.filter( livro => livro.categoria === 2) ; }
+console.log(buscarLivrosCategoria(livros))
