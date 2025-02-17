@@ -15,7 +15,7 @@ export default function Home() {
 
 // variável de estado - Mudando o filtro de acordo com ação do usuário recebe no useState o array jogosExclusivos
 const [listaJogos, setListaJogos] = useState(retornarJogos());
-// Variável para limpar a aárea de busca
+// Variável para limpar a área de busca
 const [textoBusca, setTextoBusca] = useState("");
 
 // funçao que mudará o filtro - no setListaJogos ele recebe uma .filter no array jogosExclusivos e um parametro para indicar o que será filtrado
