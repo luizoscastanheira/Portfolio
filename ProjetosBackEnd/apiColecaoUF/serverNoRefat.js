@@ -1,10 +1,12 @@
 // Criando uma API RESTful de listagem de Unidades da Federação
 // Funcional e sem refatorar
 
-import express from 'express';
 import colecaoUf from './dados/dbDados.js';
 
+// Importando o express após sua instalação via npm
+import express from 'express';
 
+// criando uma variável dereferencia para o objeto express
 const app = express();
 
 let data = new Date();
